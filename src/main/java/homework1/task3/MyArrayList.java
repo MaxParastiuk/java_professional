@@ -24,7 +24,6 @@ public class MyArrayList<E> implements List<E> {
         System.out.println(list);
 
 
-
     }
 
     private E[] values;
@@ -54,8 +53,8 @@ public class MyArrayList<E> implements List<E> {
             values = (E[]) new Object[tmp.length - 1];
             System.arraycopy(tmp, 0, values, 0, index);
             int amountElemAfterIndex = tmp.length - index - 1;
-            System.arraycopy(tmp, index + 1, values,index,amountElemAfterIndex );
-        }catch (ClassCastException ex){
+            System.arraycopy(tmp, index + 1, values, index, amountElemAfterIndex);
+        } catch (ClassCastException ex) {
             ex.printStackTrace();
         }
     }
@@ -74,7 +73,6 @@ public class MyArrayList<E> implements List<E> {
     public void set(int index, E e) {
         values[index] = e;
     }
-
 
 
     @Override
