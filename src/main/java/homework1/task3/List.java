@@ -11,4 +11,8 @@ public interface List<E> extends Iterable<E> {
 
     void set(int index, E e);
 
+    public boolean isEmpty();
+
+    public void clear();
+
 }

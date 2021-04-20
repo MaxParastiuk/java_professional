@@ -23,10 +23,15 @@ public class MyArrayList<E> implements List<E> {
         list.remove(1);
         System.out.println(list);
 
+        System.out.println(list.isEmpty());
+        list.clear();
+        System.out.println(list);
 
     }
 
     private E[] values;
+
+    private int size;
 
     public MyArrayList() {
         values = (E[]) new Object[0];
@@ -45,6 +50,17 @@ public class MyArrayList<E> implements List<E> {
         }
         return false;
     }
+    @Override
+    public boolean isEmpty() {
+        return values.length == 0;
+    }
+
+    @Override
+    public void clear() {
+            for (int i = 0; i < size; i++) {
+                values[i] = null;
+            }
+        }
 
     @Override
     public void remove(int index) {
