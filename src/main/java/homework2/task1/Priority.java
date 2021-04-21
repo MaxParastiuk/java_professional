@@ -15,6 +15,9 @@ public class Priority {
             pq.add((int) ((Math.random() * 100)));
         }
         System.out.println(pq);
+        while (!pq.isEmpty()){
+            System.out.println(pq.poll()+ " ");
+        }
     }
 }
 
