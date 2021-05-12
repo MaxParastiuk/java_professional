@@ -19,10 +19,10 @@ public class MyStAXParser {
             XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
             XMLStreamWriter writer = outputFactory.createXMLStreamWriter(new FileOutputStream(f));
 
-            writer.writeStartDocument("UTF-8","1.0");
+            writer.writeStartDocument("UTF-8", "1.0");
             writer.writeStartElement("location");
             writer.writeStartElement("city");
-            writer.writeAttribute("size","big");
+            writer.writeAttribute("size", "big");
             writer.writeCharacters("Kiev");
             writer.writeEndElement();
             writer.writeStartElement("street");
@@ -31,7 +31,6 @@ public class MyStAXParser {
             writer.writeStartElement("house_number");
             writer.writeCharacters("10");
             writer.writeEndElement();
-
 
             writer.writeEndDocument();
 
